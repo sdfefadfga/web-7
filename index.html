@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://sdfefadfga.github.io/web-1/ -->
+<html lang="zh-cmn-Hans" class=" ext-strict ext-strict ext-strict"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>中国地质大学（武汉）来访预约</title>
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./index_files/weui.css">
+    <link rel="stylesheet" href="./index_files/common.css">
+    <script src="./index_files/html5.min.js.下载"></script>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]--> 
+    <style>
+        body, html {
+            background-color: #F1F9FF;
+        }
+        .laifang-form {
+            position: relative;
+        }
+        .laifang-form:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 30px;
+            left: 0;
+            top: 0;
+            background-color: #2699FB;
+            z-index: 0;
+        }
+        .laifang-form .form {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 5px 10px #ccc;
+            -moz-box-shadow: 0 5px 10px #ccc;
+            z-index: 1;
+            padding-bottom: 80px;
+
+        }
+        .laifang-form h2 {
+            color: #008AFF;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .laifang-form .btn {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            left: 0;
+            bottom: 0;
+            background-color: #BCE0FD;
+            z-index: 2;
+        }
+        .select-arrow {
+            background-image: url(/right/mobsys//images/icons-arrow.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: auto 15px;
+        }
+        .weui-cell__hd {
+            height: 19px;
+        }
+        .weui-label {
+            width: 90px;
+            color: #4EAFFD;
+            font-size: 14px;
+        }
+        .weui-cells:before, .weui-cell:before {
+            border-top:1px solid #C1E2FD !important;
+            left: 0;
+        }
+        .weui-picker__item {
+            color: #4EAFFD;
+            font-size: 16px;
+        }
+        .weui-btn_primary {
+            background-color: #4EAFFD;
+            color: #fff;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .weui-half-screen-dialog__title {
+            color: #4EAFFD;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        #cause {
+            width: 100%;
+            height: 120px;
+            background-color: #F1F9FF;
+            outline: none;
+            padding: 10px;
+            border-radius: 12px;
+            border: 0;
+        }
+        .js_dialog .weui-half-screen-dialog__ft a {
+            color: #38ABFC;
+        }
+        #select-cause .txt {
+            width: 150px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        .weui-cell__bd,
+        .weui-cell__bd input {
+            font-size: 14px;
+        }
+        .footer a span{
+  font-size:14px;
+}
+    </style>
+</head>
+
+<body class="  ext-safari ext-linux  ext-safari  ext-safari">
+
+<!-- 页头标题 -->
+<section class="header text-center text-white">
+    中国地质大学（武汉）来访预约
+    <a href="javascript:window.history.back();" class="back d-block h-100"></a>
+    
+     <a style="position:relative;" href="http://fy.cug.edu.cn/right/LoginCheckAfter.do?loginPage=newmobile&amp;myticket=ff8080817f7e3544017f81ed8f6d125f">
+     <img src="./index_files/icons-foot-menu1.png">
+     </a>
+</section>
+
+
+<!-- 来访登记表单 -->
+<section class="laifang-form">
+    <form id="form1" name="form1" method="post" action="http://fy.cug.edu.cn/right/entity/basic/sbnClcwPeopleListList_findObjectById.do?id=ff8080817f794ff9017f7d6e57421b59&amp;myticket=ff8080817f7e3544017f81ed8f6d125f" onsubmit="return checkSubmit();">
+        <div class="form px-3">
+        <input type="hidden" name="object.id" id="id" value="">
+        <input type="hidden" name="myticket" id="myticket" value="ff8080817f7e3544017f81ed8f6d125f">
+        <!-- 访客登记 -->
+        <input type="hidden" name="object.CType" id="CType" value="visitor">
+            <h2 class="weui-form__title pt-5 text-center pb-3" onclick="reset()">来访登记+</h2>
+           
+            <div class="weui-cells weui-cells_form">
+         
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"> <label class="weui-label">姓名*</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" name="object.name" id="name" value="段钰淼" maxlength="20">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active" id="select-sex">
+                    <div class="weui-cell__hd"><label class="weui-label">性别*</label></div>
+                    <div class="weui-cell__bd select-arrow">
+                        <div class="weui-cell__bd txt">男</div>
+                        <input type="hidden" name="object.CSex" id="sex" value="男">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active" id="select-idType">
+                    <div class="weui-cell__hd"><label class="weui-label">证件类型*</label></div>
+                    <div class="weui-cell__bd select-arrow">
+                        <div class="weui-cell__bd txt">
+                          
+                        
+                        身份证
+                        
+                       
+                        &nbsp;</div>
+                        <input type="hidden" name="object.CExt10" id="idType" value="身份证">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">证件号码*</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" maxlength="20" name="object.CCard" id="idCode" value="510921200204041611">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">联系电话*</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="tel" class="weui-input" maxlength="20" name="object.CMobile" id="phone" value="15535734280">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">工作单位*</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" maxlength="50" name="object.CDept" id="workName" value="自动化学院">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">居住地址</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" maxlength="50" name="object.CHouse" id="address" value="">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active" id="select-school">
+                    <div class="weui-cell__hd"><label class="weui-label">进出校区*</label></div>
+                    <div class="weui-cell__bd select-arrow">
+                        <div class="weui-cell__bd txt">
+                         
+                         南望山校区
+                        </div>
+                        <input type="hidden" name="object.CExt24" id="school" value="南望山校区">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active"> 
+                    <div class="weui-cell__hd"><label class="weui-label">来访时间*<!-- 有效期 CExt25 --></label></div>
+                    <div class="weui-cell__bd">
+						<input type="text" id="deadline" class="weui-input" style="border: 0px;" readonly="">
+					</div>
+                </div>
+                <div class="weui-cell weui-cell_active" id="select-cause">
+                    <div class="weui-cell__hd"><label class="weui-label">来访事由</label></div>
+                    <div class="weui-cell__bd select-arrow">
+                        <div class="weui-cell__bd txt">看病</div>
+                        <input type="hidden" name="object.CInReason" id="note" value="看病">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">联系单位</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" maxlength="20" name="object.CSaleName" id="CSaleName" value="">
+                    </div>
+                </div>
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">车牌号</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" onkeyup="this.value=this.value.toUpperCase()" class="weui-input" maxlength="20" name="object.CExt34" id="carNumber" value="">
+                    </div>
+                </div>
+                
+                 <div class="weui-cell weui-cell_active" id="select-school2">
+                    <div class="weui-cell__hd"><label class="weui-label">车型*</label></div>
+                    <div class="weui-cell__bd select-arrow">
+                        <div class="weui-cell__bd txt">
+                         
+                         小型轿车
+                        </div>
+                        <input type="hidden" name="object.CExt35" id="school2" value="小型轿车">
+                    </div>
+                </div>
+                
+                <div class="weui-cell weui-cell_active">
+                    <div class="weui-cell__hd"><label class="weui-label">备注</label></div>
+                    <div class="weui-cell__bd">
+                        <input type="text" class="weui-input" maxlength="20" name="object.CExt19" id="CExt19" value="">
+                    </div>
+                </div>
+            </div>
+            <input type="button" onclick="checkSubmit();" value="保存" class="btn btn-block text-white">
+        </div>
+    </form>
+</section>
+
+
+<!-- 来访事由容器 -->
+<div class="js_dialog" id="iosDialog2" style="display: none;">
+    <div class="weui-mask"></div>
+    <div id="js_dialog_2" class="weui-half-screen-dialog pb-4">
+        <div class="weui-half-screen-dialog__hd">
+            <div class="weui-half-screen-dialog__hd__side">
+                <button class="weui-icon-btn">关闭<i class="weui-icon-close-thin closeDia"></i></button>
+            </div>
+            <div class="weui-half-screen-dialog__hd__main">
+                <strong class="weui-half-screen-dialog__title">请输入来访事由</strong>
+            </div>
+        </div>
+        <div class="weui-half-screen-dialog__bd pb-3">
+           <textarea class="note" id="cause"></textarea>
+        </div>
+        <div class="weui-half-screen-dialog__ft px-0 pb-5">
+            <a href="javascript:" class="float-left closeDia">取消</a>
+            <a href="javascript:" class="float-right" id="okDia">确认</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- 页脚导航 -->
+<div class="filling"></div>
+<section class="footer">
+    <div class="row px-1 m-0 h-100">
+    
+     <!-- 200227 -->
+         
+         
+          <!-- 200228 -->
+         
+         
+          <!-- 200229 -->
+         
+        
+           <!-- 200230 -->
+          
+        
+        
+     <!-- 200227 -->
+         	 
+        <div class="col-3">
+            <a href="http://fy.cug.edu.cn/right/jspDirectAcess.do?entityObject=registercug&amp;myticket=ff8080817f7e3544017f81ed8f6d125f" class="media h-100"><span class="align-self-center mx-auto text-white">来访登记</span></a>
+        </div>
+         
+         
+          <!-- 200228 -->
+         
+         
+          <!-- 200229 -->
+         
+        
+           <!-- 200230 -->
+          
+        
+        
+     <!-- 200227 -->
+         
+         
+          <!-- 200228 -->
+         
+         
+          <!-- 200229 -->
+         
+        <div class="col-3">
+            <a href="http://fy.cug.edu.cn/right/jspDirectAcess.do?entityObject=yuyuegaid&amp;myticket=ff8080817f7e3544017f81ed8f6d125f" class="media h-100"><span class="align-self-center mx-auto text-white">预约查询</span></a>
+        </div>
+         
+        
+           <!-- 200230 -->
+          
+        
+        
+     <!-- 200227 -->
+         
+         
+          <!-- 200228 -->
+         
+         
+          <!-- 200229 -->
+         
+        
+           <!-- 200230 -->
+          
+         <div class="col-3">
+              <a href="http://fy.cug.edu.cn/right/jspDirectAcess.do?entityObject=visitorgaid&amp;myticket=ff8080817f7e3544017f81ed8f6d125f" class="media h-100"><span class="align-self-center mx-auto text-white">到访查询</span></a>
+        </div>
+        
+        
+        
+     <!-- 200227 -->
+         
+         
+          <!-- 200228 -->
+         
+         
+          <!-- 200229 -->
+         
+        
+           <!-- 200230 -->
+          
+        
+            
+    </div>
+</section>
+<script type="text/javascript" src="./index_files/ext-base.js.下载"></script>
+  <script type="text/javascript" src="./index_files/ext-all.js.下载"></script>
+  <script type="text/javascript" src="./index_files/ext-lang-zh_CN.js.下载"></script>
+<script src="./index_files/jquery.min.js.下载"></script>
+<script src="./index_files/common.js.下载"></script>
+<script src="./index_files/weui.min.js.下载"></script>
+<script>
+  /**
+  * 性别类型：下拉配置
+  **/
+  var sexType_config = [{
+                        label: '男',
+                        value: '男'
+                       },
+                       {
+                        label: '女',
+                        value: '女'
+                       }
+  ];
+
+
+  /**
+  * 证件类型：下拉配置
+  **/
+  var idType_config = [{
+                        label: '身份证',
+                        value: '身份证'
+                       },
+                       {
+                        label: '学生证',
+                        value: '学生证'
+                       },
+                       {
+                        label: '教工证',
+                        value: '教工证'
+                       }
+  ];
+
+
+  /**
+  * 进出校区：下拉配置
+  **/
+  var school_config = [{
+                        label: '南望山校区',
+                        value: '南望山校区'
+                       },{
+                        label: '未来城校区',
+                        value: '未来城校区'
+                       }
+  ];
+  /**
+  * 车型：下拉配置
+  **/
+  var school2_config = [{
+                        label: '小型轿车',
+                        value: '小型轿车'
+                       },{
+                        label: '大型车',
+                        value: '大型车'
+                       },{
+                        label: '其他车',
+                        value: '其他车'
+                       }
+  ];
+
+	$(document).ready(function (){
+        initTimePicker();
+	});
+ 
+    /** 初始化时间 */
+    function initTimePicker(){
+    	var deadline = $("#deadline");
+        deadline.val(getDate());
+    	var start = {
+    		'min': getDate(), // 设置最小日期为当前日期
+    		'max': '2030-11-28',
+            
+    	};
+    	deadline.datetimePicker(start);
+    }
+ 
+    function getHours(){
+    	// 返回可选择的小时数
+    	return ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23'];
+    }
+ 
+    function getMinutes(){
+    	// 返回可选择的分钟数
+    	return ['00', '10', '20', '30', '40', '50'];
+    }
+ 
+	/** 获取当前日期格式化后的字符串：YYYY-MM-DD*/
+	function getDate(){
+		var now = new Date();
+		var nowStr = now.getFullYear() + "-"; // 获取年份(4位)
+		nowStr += formatNumber(now.getMonth()  + 1) + "-"; // 获取月份(0-11)
+		nowStr += formatNumber(now.getDate()); // 获取日(1-31)
+		return nowStr;
+	}
+ 
+	/** 获取当前时间格式化后的字符串：YYYY-MM-DD hh:mm */
+    function getTime(){
+		var now = new Date();
+	    // now.getDay(); //获取星期X(0-6,0代表星期天)
+		// now.getSeconds(); //获取秒数(0-59)
+		var nowStr = now.getFullYear() + "-"; // 获取年份(4位)
+		nowStr += formatNumber(now.getMonth() + 1) + "-"; // 获取月份(0-11)
+		nowStr += formatNumber(now.getDate()) + " "; // 获取日(1-31)
+		nowStr += formatNumber(now.getHours()) + ":"; // 获取小时数(0-23)
+		nowStr += formatNumber(now.getMinutes()); // 获取分钟数(0-59)
+		return nowStr;
+	}
+ 
+    /** 将一位字符格式化成两位：如 1-->01  2-->02  10-->10 */
+	function formatNumber(param){
+	    return param < 10 ? "0" + param : param;
+	}
+
+
+  // 以下代码不需要修改=================
+  // 选择性别
+  $('#select-sex').on('click', function () {
+      weui.picker( sexType_config, {
+                                   onConfirm: function (result) {
+                                                  var value = result.toString(),
+                                                      label = '';
+
+                                                  for( var i in sexType_config ) {
+                                                      if( sexType_config[i].value == value ) {
+                                                          label = sexType_config[i].label;
+                                                          break;
+                                                      }
+                                                  }
+
+                                                  $('#select-sex .txt').text( label );
+                                                  $('#sex').val( value );
+                   },
+                   defaultValue: ['男'],
+                   title: '请选择性别'
+        });
+  });
+
+
+  // 选择证件
+  $('#select-idType').on('click', function () {
+      weui.picker( idType_config, {
+                                   onConfirm: function (result) {
+                                                  var value = result.toString(),
+                                                      label = '';
+
+                                                  for( var i in idType_config ) {
+                                                      if( idType_config[i].value == value ) {
+                                                          label = idType_config[i].label;
+                                                          break;
+                                                      }
+                                                  }
+
+                                                  $('#select-idType .txt').text( label );
+                                                  $('#idType').val( value );
+                   },
+                   defaultValue: ['0'],
+                   title: '请选择证件类型'
+        });
+  });
+
+
+  // 来访时间
+  $('#select-date').on('click', function () {
+      weui.datePicker({
+                       start: 2020,
+                       end: new Date().getFullYear()+1,
+                       onConfirm: function (result) {
+                                      var date = result.toString(),
+                                          arr = date.split(','),
+                                          date = arr[0] + '-' + (arr[1].length==1?('0'+arr[1]):arr[1]) + '-' + (arr[2].length==1?('0'+arr[2]):arr[2]) ;
+										  alert(date);
+                                      $('#select-date .txt').text( date );
+                                      $('#date').val( date );
+                       },
+                       title: '请选择来访时间'
+      });
+  });
+
+
+  // 进出校区
+  $('#select-school').on('click', function () {
+      weui.picker( school_config, {
+                                   onConfirm: function (result) {
+                                                  var value = result.toString(),
+                                                      label = '';
+
+                                                  for( var i in school_config ) {
+                                                      if( school_config[i].value == value ) {
+                                                          label = school_config[i].label;
+                                                          break;
+                                                      }
+                                                  }
+
+                                                  $('#select-school .txt').text( label );
+                                                  $('#school').val( value );
+                   },
+				   defaultValue: ['南望山校区'], // 默认值！
+                   title: '请选择进出校区'
+        });
+  });
+
+// 车型
+  $('#select-school2').on('click', function () {
+      weui.picker( school2_config, {
+                                   onConfirm: function (result) {
+                                                  var value = result.toString(),
+                                                      label = '';
+
+                                                  for( var i in school2_config ) {
+                                                      if( school2_config[i].value == value ) {
+                                                          label = school2_config[i].label;
+                                                          break;
+                                                      }
+                                                  }
+
+                                                  $('#select-school2 .txt').text( label );
+                                                  $('#school2').val( value );
+                   },
+				   defaultValue: ['小型轿车'], // 默认值！
+                   title: '请选择车型'
+        });
+  });
+
+
+  // 来访事由
+  $('#select-cause').click(function(){
+      $('#iosDialog2').fadeIn(200);
+  });
+
+
+  $(function(){
+      $('.closeDia, .weui-mask').click(function(){
+          $('.js_dialog').fadeOut( 200 );
+      });
+
+
+      $('#okDia').click(function(){
+          var cause = $('#cause').val();
+          $('#select-cause .txt').text( cause );
+          $('#note').val( cause );
+          $('.js_dialog').fadeOut( 200 );
+      });
+  });
+
+  function reset()
+  {
+  $('#id').val(null);
+   $('#name').val(null);
+    
+     $('#idCode').val(null) ;
+    $('#phone').val(null);
+     $('#workName').val(null);
+     $('#address').val(null);
+  
+     $('#carNumber').val(null);
+  }
+  /**
+  * 表单提交检测
+  **/
+  function checkSubmit() {
+                  
+      var name      = trim($('#name').val()),
+          sex       = trim($('#sex').val()),
+          idType    = trim($('#idType').val() ),
+          idCode    = trim($('#idCode').val() ),
+          phone     = trim($('#phone').val() ),
+          workName  = trim($('#workName').val() ),
+          address   = trim($('#address').val() ),
+          school    = trim($('#school').val() ),
+          date      = trim($('#date').val() ),
+          note      = trim($('#note').val() ),
+          carNumber = trim($('#carNumber').val() );
+
+	carNumber =   carNumber.replace(/[ ]/g, "");
+     carNumber=carNumber.replace(/[ ]/g,"");
+     carNumber=carNumber.replace(/[-]/g,"");
+      document.getElementById("carNumber").value=carNumber;
+
+
+
+
+      if( name == '' ) {
+          alert('请输入姓名');
+          return false;
+      }
+
+      if( sex == '' ) {
+          alert('请选择性别');
+          return false;
+      }
+
+      if( idType == '' ) {
+          alert('请选择证件类型');
+          return false;
+      }
+
+      if( idCode == '' ) {
+          alert('请输入证件号码');
+          return false;
+      }
+		if (idType == '身份证')
+		{
+		  if (sfzgg(idCode))
+		    {//正确
+		    }else
+		    {
+		       alert('请输入正确的身份证号码！');
+          		return false;
+		    }
+		}
+
+
+
+      if( phone == '' ) {
+          alert('请输入联系电话');
+          return false;
+      }
+
+      if( workName == '' ) {
+          alert('请输入工作单位');
+          return false;
+      }
+
+    
+
+      if( school == '' ) {
+          alert('请选择进出校区');
+          return false;
+      }
+
+      if( date == '' ) {
+          alert('请选择来访时间');
+          return false;
+      }
+      if (carNumber=='')
+      {//不予理睬
+      }else
+      {
+       if(isLicenseNo(carNumber))
+       {}
+       else
+       {
+       
+		       alert('请输入正确的车牌号码！');
+          		return false;
+       }
+      
+      }
+
+
+      var obj = saveme();
+  Ext.Ajax.request({
+          method:'POST',
+          url:'/right/entity/basic/sbnClcwPeopleList_saveSbnClcwPeopleObject.do',
+          params:obj,
+          success : successFirstFn,
+          failure : failureFn
+        } );
+      
+      
+  }
+  function  saveme()
+{
+	var saveForm = $("#form1");
+	var obj = saveForm.serialize();
+	//var obj = {"SbPeopleFront.id":Ext.get('id').dom.value};
+   //Ext.applyIf(obj,{"SbPeopleFront.name":Ext.get('name').dom.value});
+	return obj;	
+};
+ function is_phone(str){
+
+	if ( str == "") {  
+        return true;  
+    }
+
+    var re = /^0\d{2,3}-?\d{7,8}$/;
+    if(re.test(str)){
+        return true;
+    }else{
+    
+    var telReg = !!str.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/);
+	//如果手机号码不能通过验证
+	if(telReg == false){
+ 		
+ 		return false;
+	}else
+	{
+		
+	return true;
+	}
+    
+    
+      
+    }
+}; 
+ //车牌号检测
+function isLicenseNo(str) {
+ if (str=='')
+  {
+   return true;
+  }
+return /^(([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z](([0-9]{5}[DF])|([DF]([A-HJ-NP-Z0-9])[0-9]{4})))|([京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领][A-Z][A-HJ-NP-Z0-9]{4}[A-HJ-NP-Z0-9挂学警港澳使领]))$/.test(str);
+ 
+};
+function sfzgg(haoma)
+{
+    if (haoma == "")
+    {
+     return true;
+    }
+
+	if(haoma.length<18)
+	{
+		return false;
+	}
+	var ls_nian = haoma.substring(6,10);
+	var ls_yue = haoma.substring(10,12);
+	var ls_ri = haoma.substring(12,14);
+	var ls_xingbie = haoma.substring(16,17);
+	var ls_riqi = haoma.substring(6,14);
+	var li_jqyz =  new Array();
+	li_jqyz[0] = 7;
+	li_jqyz[1] = 9;
+	li_jqyz[2] = 10;
+	li_jqyz[3] = 5;
+	li_jqyz[4] = 8;
+	li_jqyz[5] = 4;
+	li_jqyz[6] = 2;
+	li_jqyz[7] = 1;
+	li_jqyz[8] = 6;
+	li_jqyz[9] = 3;
+	li_jqyz[10] = 7;
+	li_jqyz[11] = 9;
+	li_jqyz[12] = 10;
+	li_jqyz[13] = 5;
+	li_jqyz[14] = 8;
+	li_jqyz[15] = 4;
+	li_jqyz[16] = 2;
+	li_jqyz[17] = 1;
+
+	var ls_jymzfb = new Array();
+	ls_jymzfb[0] = "1";
+	ls_jymzfb[1] = "0";
+	ls_jymzfb[2] = "X";
+	ls_jymzfb[3] = "9";
+	ls_jymzfb[4] = "8";
+	ls_jymzfb[5] = "7";
+	ls_jymzfb[6] = "6";
+	ls_jymzfb[7] = "5";
+	ls_jymzfb[8] = "4";
+	ls_jymzfb[9] = "3";
+	ls_jymzfb[10] = "2";
+	
+	var li_sum = 0;
+	for (var i=0;i<17;i++){
+        li_sum = li_sum + parseInt(haoma.substring(i,i+1))*li_jqyz[i];
+	}
+	var li_jym = li_sum % 11;
+	var ls_jym = ls_jymzfb[li_jym];
+	var ddhaoma=haoma.substring(17,18);
+	if (ddhaoma!=ls_jym) 
+	{
+	   return false;
+	} 
+	
+	return true;
+}; 
+        
+  function failureFn(response,options){
+      alert(response.responseText);
+    }
+
+    function successFirstFn(response,options){
+      var responseArray = Ext.decode(response.responseText);
+      
+        if ( Ext.get('id').dom.value == null || ""== Ext.get('id').dom.value || Ext.get('id').dom.value == 'undefined'  )
+        {
+          Ext.get('id').dom.value= responseArray.id;
+          alert(responseArray.msg);
+         
+        }
+        else
+        {
+         alert(responseArray.msg);
+        
+        }
+      
+	
+    }
+</script>
+</body></html>
